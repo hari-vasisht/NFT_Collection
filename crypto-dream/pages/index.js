@@ -1,9 +1,7 @@
 import { Contract, providers, utils } from "ethers";
-import { getJsonWalletAddress } from "ethers/lib/utils";
 import Head from "next/head";
 import React, { useEffect, useRef, useState } from "react";
 import Web3Modal from "web3modal";
-import { walletconnect } from "web3modal/dist/providers/connectors";
 import { abi, NFT_ADDRESS } from "../constants";
 import styles from "../styles/Home.module.css";
 
