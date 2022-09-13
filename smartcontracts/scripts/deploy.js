@@ -9,8 +9,8 @@ async function main() {
     "CryptoDreamers"
   );
   const deployedCryptoDreamersContract = await CryptoDreamersContract.deploy(
-    whitelistContarct,
-    metadataUrl
+    metadataUrl,
+    whitelistContarct
   );
   console.log(
     "CryptoDreamers contract deployed to:",
