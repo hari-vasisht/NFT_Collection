@@ -73,7 +73,7 @@ export default function Home() {
     try {
       const provider = await getProviderOrSigner();
       const nftContract = new Contract(NFT_ADDRESS, abi, provider);
-      const _presaleStarted = await nftContract.presaleStarted();
+      const _presaleStarted = await nftContract.preSaleStarted();
       if (!_presaleStarted) {
         await getOwner();
       }
@@ -88,7 +88,7 @@ export default function Home() {
     try {
       const provider = await getProviderOrSigner();
       const nftContract = new Contract(NFT_ADDRESS, abi, provider);
-      const _presaleEnded = await nftContract.presaleEnded();
+      const _presaleEnded = await nftContract.preSaleEnded();
       const hasEnded = _presaleEnded.lt(Math.floor(Date.now() / 1000));
       if (hasEnded) {
         setPresaleEnded(true);
@@ -121,7 +121,7 @@ export default function Home() {
     try {
       const provider = await getProviderOrSigner();
       const nftContract = new Contract(NFT_ADDRESS, abi, provider);
-      const _tokenIds = await nftContract.tokenIds();
+      const _tokenIds = await nftContract.tokenIDs();
       setTokenIdsMinted(_tokenIds.toString());
     } catch (err) {
       console.error(err);
