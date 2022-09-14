@@ -8,7 +8,7 @@ import "./IWhitelist.sol";
 contract CryptoDreamers is ERC721Enumerable, Ownable {
     string _baseTokenURI;
     uint public _price = 0.1 ether;
-    bool public _paused = true;
+    bool public _paused;
     uint public _maxMint = 20;
     uint public tokenIDs;
     IWhitelist whitelist;
